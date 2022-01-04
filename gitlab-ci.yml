@@ -1,0 +1,20 @@
+stages: 
+ - build
+
+angular-build:
+ stage: build 
+ tags: 
+   - npm 
+ script: 
+   - npm run build
+ only: 
+   - master
+ artifacts: 
+   expire_in: 1 hour
+   paths:
+    - "./dist"
+
+  
+
+   
+  
